@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html>
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <title>Hello World</title>
     <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
@@ -9,29 +8,21 @@
 
     <!-- Don't use this in production: -->
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
-</head>
+  </head>
+  <body>
+      <div id="root"></div>
+      <script type="text/babel">
+          const container = document.getElementById('root');
+          const root = ReactDOM.createRoot(container);
 
-<body>
-    <div id="root"></div>
-    <script type="text/babel">
-
-        const person = {
-            firstName: "Simo",
-            lastName: "Siili"
-        }
-
-        function FullName() {
-            return <h3>Hello, {person.firstName} {person.lastName} </h3>
-        }
-
-        /* const element = (
-           <h3>Hello, {person.firstName} {person.lastName} </h3>
-         )
-         */
-
-        const container = document.getElementById('root');
-        const root = ReactDOM.createRoot(container);
-        root.render(<FullName />);
+    
+      function tick() {
+        const element = (
+            <h3>{new Date().getSeconds()}</h3>
+        );
+        root.render(element);
+      }
+      setInterval(tick, 1000);
 
     </script>
     <!--
@@ -47,6 +38,5 @@
       You can also use React without JSX, in which case you can remove Babel:
       https://reactjs.org/docs/react-without-jsx.html
     -->
-</body>
-
+  </body>
 </html>
