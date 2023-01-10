@@ -13,13 +13,21 @@
     <div id="root"></div>
     <script type="text/babel">
     
-      function MyApp() {
-        return <h1>Hello, world!</h1>;
+      const person = {
+        firstName: "Simo",
+        lastName: "Siili"
       }
+      
+      const element = (
+        <div>
+            <h3>Greetings</h3>
+            <p>Hello, {person.firstName} {person.lastName} </p>
+        </div>
+      );
 
       const container = document.getElementById('root');
       const root = ReactDOM.createRoot(container);
-      root.render(<MyApp />);
+      root.render(element);
 
     </script>
     <!--
