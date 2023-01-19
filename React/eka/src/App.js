@@ -1,11 +1,15 @@
 
 import './App.css';
+import Content from './Content';
+import Footer from './Footer';
+import Header from './Header';
 
 function App() {
   return (
     <>
-      <h1>Otsikko</h1>
-      <p>Eka sivu</p>
+      <Header title="Minun sivut"/>
+      <Content />
+      <Footer author="Jormulisensei"/>
     </>
   );
 }
