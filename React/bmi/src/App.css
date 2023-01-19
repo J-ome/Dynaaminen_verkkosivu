@@ -1,0 +1,11 @@
+form {
+  margin-left: 5px;
+}
+label {
+  display: inline-block;
+  margin-right: 5px;
+  width: 85px;
+}
+input {
+  width: 30px;
+}
