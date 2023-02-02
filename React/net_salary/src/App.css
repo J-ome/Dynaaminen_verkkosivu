@@ -2,3 +2,14 @@ label {
   margin-right: 5px;
 }
 
+form {
+  margin-left: 5px;
+}
+
+.payments {
+  margin-left: 5px;
+}
+
+input {
+  width: 75px;
+}
