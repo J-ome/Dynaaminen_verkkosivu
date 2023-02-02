@@ -1,0 +1,12 @@
+form {
+    margin-left: 5px;
+    border: solid black 5px;
+    width: fit-content;
+    padding: 10px;
+}
+label {
+    margin-right: 5px;
+}
+.weight {
+    width: 50px;
+}

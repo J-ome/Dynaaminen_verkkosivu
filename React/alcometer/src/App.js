@@ -1,6 +1,7 @@
 
 import { useState } from 'react';
 import './App.css';
+import Options from './components/Options';
 
 function App() {
 
@@ -21,39 +22,38 @@ function App() {
 
     if (gender === "male") {
       alcLevel = gramsLeft / (weight * 0.7)
+      if (alcLevel < 0) {
+        alcLevel = 0
+      }
     } else {
       alcLevel = gramsLeft / (weight * 0.6)
-    }
+      if (alcLevel < 0) {
+        alcLevel = 0
+      }
+    } 
     setResult(alcLevel)
   }
 
 
   return (
     <>
-      <h2>Count alcohol blood level</h2>
+      
       <form onSubmit={alcoholLevel}>
+      <h2>Count alcohol blood level</h2>
         <div>
-          <label>Weight (Kg)</label>
+          <label class="weight">Weight (Kg)</label>
           <input name='weight' type="number" step="1" class="weight" value={weight} onChange={e => setWeight(e.target.value)} />
         </div>
         <div>
           <label>Bottles (0.33l)</label>
           <select name='bottles' value={bottles} onChange={e => setBottles(e.target.value)}>
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5</option>
+            <Options/>
           </select>
         </div>
         <div>
           <label>Time (Hours)</label>
           <select name='time' value={time} onChange={e => setTime(e.target.value)}>
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5</option>
+            <Options/>
           </select>
         </div>
         <div>

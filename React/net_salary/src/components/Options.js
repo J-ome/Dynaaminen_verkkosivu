@@ -15,3 +15,21 @@ export default function Options() {
     })
   )
 }
+
+/* props saa vaihdettua arvon kirjoittamalla max/min app.js tiedostoon
+
+export default function Options(props) {
+
+  const percentages = []
+
+  for (let i = props.min; i <= props.max; i = i + 0.25) {
+      percentages.push(i)
+  }
+
+
+return (
+  percentages.map (percentages => {
+      return <option value={percentages}>{percentages.toFixed(2)}%</option>
+  })
+)
+} */
