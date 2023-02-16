@@ -1,6 +1,7 @@
-import logo from './logo.svg';
+
 import './App.css';
 import { useState, useEffect } from 'react';
+import axios from 'axios';
 
 
 
@@ -12,6 +13,22 @@ function App() {
   const [text, setText] = useState("")
 
   useEffect(() => {
+    
+    axios.get(URL)
+    .then((response)=>{
+      const joke = response.data.contents.jokes[0].joke
+      setTitle(joke.title)
+      setText(joke.text)
+    }).catch (error => {
+      alert(error)
+    })
+  }, [])
+  
+
+
+
+  //asyncillä
+  /*useEffect(() => {
     async function getJoke() {
       try {
         const response = await fetch(URL)
@@ -30,7 +47,7 @@ function App() {
     getJoke()
    
   }, [])
-  
+  */
 
 
   return (
