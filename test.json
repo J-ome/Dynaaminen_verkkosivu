@@ -1,20 +1,47 @@
 {
     "Opintojaksot": [
         {
-            "Opintojakso": "Opintojakson nimi",
-            "Laajuus": "Laajuus",
-            "Opettaja": {
+            "Opintojakso": "Jakson nimi",
+                "Osallistujat": [
+                    {
+                    "Etunimi": "Etunimi",
+                    "Sukunimi": "Sukunimi"
+                
+            }],
+            "Opettaja": [{
                 "Etunimi": "Etunimi",
                 "Sukunimi": "Sukunimi"
-            }
-        },
-        ""
+            }],
+            "Laajuus": "Laajuus"
+        }
+
     ]
 }
 
 
-
-/*JSON-tiedostossa sisältää opintojaksojen tietoja (eli opintojaksoja voi olla monta).
-Opintojakson tietoja ovat otsikko, laajuus ja opettaja. Opettaja sisältää etu- ja
-sukunimen. Opintojaksolle osallistuu opiskelijoita eli opiskelijoita voi olla monta.
-Opiskelija sisältää etu- ja sukunimen.*/
+//Opettajan esimerkki
+{
+    "Opintojaksot": [
+        {
+            "Otsikko": "Dynaaminen verkkosivu",
+            "Laajuus": 5,
+            "Opettaja": 
+                {
+                    "Etunimi": "Mathilda",
+                    "Sukunimi": "Muffkington"
+                },
+            "Opiskelijat": [
+                {
+                    "Etunimi": "Samwise",
+                    "Sukunimi": "Gamgi"
+                },
+                {
+                    "Etunimi": "Frodo",
+                    "Sukunimi": "Baggins"
+                }
+            ]
+            
+            
+        }
+    ]
+}
