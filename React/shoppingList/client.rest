@@ -1,0 +1,6 @@
+### Get tasks
+
+GET http://localhost/shoppinglist
+
+### Add task
+POST http://localhost/shoppinglist
